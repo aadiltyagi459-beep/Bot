@@ -339,7 +339,19 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_user.id == ADMIN_ID:
         await update.message.reply_text("✅ Admin panel ready.", reply_markup=ADMIN_KB)
     else:
-        await update.message.reply_text("✅ Message भेजो—अगर rule match होगा तो auto-reply मिलेगा, नहीं तो admin तक चला जाएगा।")
+        await update.message.reply_text(
+    "👋 Welcome to Service Support Bot\n\n"
+    "Hello and thank you for contacting support.\n\n"
+    "If you have any issue, question, or need assistance, please send your message here. "
+    "Our support team will review your request and respond as soon as possible.\n\n"
+    "Please describe your problem clearly so we can help you faster.\n\n"
+    "-----\n\n"
+    "👋 सर्विस सपोर्ट बॉट में आपका स्वागत है\n\n"
+    "आपका हमारी सहायता सेवा में स्वागत है।\n\n"
+    "अगर आपको कोई समस्या है, कोई सवाल है या सहायता चाहिए, तो कृपया यहाँ अपना संदेश भेजें। "
+    "हमारी सपोर्ट टीम आपके संदेश को देखकर जल्द से जल्द जवाब देगी।\n\n"
+    "कृपया अपनी समस्या को स्पष्ट रूप से लिखें ताकि हम आपकी जल्दी मदद कर सकें।"
+)
 
 async def admin_help(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if update.effective_user.id != ADMIN_ID:
